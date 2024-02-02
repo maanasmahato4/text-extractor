@@ -36,7 +36,7 @@
 		// "paths": {},                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
 		"rootDirs": [
 			"./src",
-			"./__tests__",
+			"coverage/__tests__",
 		] /* Allow multiple folders to be treated as one when resolving modules. */,
 		// "typeRoots": [],                                  /* Specify multiple folders that act like './node_modules/@types'. */
 		"types": [
@@ -116,6 +116,6 @@
 		// "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
 		"skipLibCheck": true /* Skip type checking all .d.ts files. */,
 	},
-	"include": ["src/**/*", "__tests__/**/*"],
-	"exclude": ["node_modules", "dist"],
+	"include": ["src/**/*", "__tests__/*"],
+	"exclude": ["node_modules", "dist", "coverage"],
 }

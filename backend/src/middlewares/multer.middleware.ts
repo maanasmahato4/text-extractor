@@ -18,7 +18,8 @@ const diskStorage = multer.diskStorage({
 		cb(null, './uploads');
 	},
 	filename: (req: Request, file, cb) => {
-		const uniqueName = `${nanoid()}${Date.now()}`;
+		const extName = path.extname(file.originalname);
+		const uniqueName = `${nanoid()}${Date.now()}${extName}`;
 		cb(null, uniqueName);
 	},
 });

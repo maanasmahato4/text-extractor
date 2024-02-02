@@ -10,7 +10,7 @@ async function extractText(filePath: string): Promise<string> {
 		if (error instanceof Error) {
 			throw new Error(error.message);
 		} else {
-			throw 'error during text extraction';
+			return 'error during text extraction';
 		}
 	}
 }
